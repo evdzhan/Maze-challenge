@@ -1,5 +1,10 @@
 package uk.gov.dwp.maze;
 
+import uk.gov.dwp.maze.explorer.Explorer;
+import uk.gov.dwp.maze.explorer.ExplorerLocation;
+import uk.gov.dwp.maze.maze.Maze;
+import uk.gov.dwp.maze.maze.MazeLoader;
+
 import java.util.Scanner;
 
 /**

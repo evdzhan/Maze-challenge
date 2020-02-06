@@ -1,4 +1,4 @@
-package uk.gov.dwp.maze;
+package uk.gov.dwp.maze.explorer;
 
 public enum ExplorerDirection {
     NORTH,

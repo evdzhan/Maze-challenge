@@ -1,4 +1,4 @@
-package uk.gov.dwp.maze;
+package uk.gov.dwp.maze.maze;
 
 import java.util.HashMap;
 import java.util.Map;
