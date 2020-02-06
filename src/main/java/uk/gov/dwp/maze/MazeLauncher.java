@@ -9,8 +9,10 @@ public class MazeLauncher {
 
 
     public static void main(String[] args) {
+
         System.out.println("Loaded default Maze");
         Maze maze = MazeLoader.loadDefaultMaze();
+
         Scanner scanny = new Scanner(System.in);
         printMenu();
 
@@ -26,9 +28,18 @@ public class MazeLauncher {
                 int y = scanny.nextInt();
                 System.out.println(maze.query(x, y));
             } else if (currentInput.equalsIgnoreCase("L")) {
+                System.out.println("Please enter the name of the Maze file. This should be found below the resources \n" +
+                        "folder and be a .txt file containing 2D representation of the maze, where 'X' denotes wall\n" +
+                        " and empty space denotes walkable terrain. 'F' represents finish, while 'S' represents start.\n" +
+                        " (Press enter to load default maze).");
                 String mazeResourceName = scanny.nextLine();
-                maze = MazeLoader.loadMazeFromResource(mazeResourceName);
-                System.out.println("Loaded " + mazeResourceName + "maze");
+                if (mazeResourceName.equalsIgnoreCase("")) {
+                    maze = MazeLoader.loadDefaultMaze();
+                    System.out.println("Loaded default maze.");
+                } else {
+                    maze = MazeLoader.loadMazeFromResource(mazeResourceName);
+                    System.out.println("Loaded " + mazeResourceName + " maze file successfully.");
+                }
             }
             currentInput = scanny.nextLine();
         } while (!currentInput.equalsIgnoreCase("Q"));
