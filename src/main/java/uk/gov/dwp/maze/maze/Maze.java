@@ -56,9 +56,9 @@ public class Maze {
         this.spacesCount = _spacesCount;
     }
 
-    public String query(int x, int y) {
+    public MazeComponentType query(int x, int y) {
         if (x >= 0 && x < mazeComponents.length && y >= 0 && y < mazeComponents[x].length) {
-            return mazeComponents[x][y].toString();
+            return mazeComponents[x][y].getType();
         } else {
             throw new IndexOutOfBoundsException("Out of bounds query.");
         }

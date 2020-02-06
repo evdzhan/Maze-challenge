@@ -31,7 +31,7 @@ public enum MazeComponentType {
     public static MazeComponentType get(char type) {
         if (type != 'X' && type != 'x' && type != ' ' && type != 'S' && type != 's' && type != 'F' && type != 'f') {
             throw new IllegalArgumentException(String.format(
-                    "Tried to parse char that is not know to the MazeComponentType. Was passed: '%s'.", type));
+                    "Tried to parse char that is not known to the MazeComponentType. Was passed: '%s'.", type));
         }
         return lookup.get(Character.toUpperCase(type));
     }
