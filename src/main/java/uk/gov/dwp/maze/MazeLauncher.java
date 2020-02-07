@@ -10,7 +10,8 @@ import uk.gov.dwp.maze.maze.MazeLoader;
 import java.util.Scanner;
 
 /**
- * Class to load and query a maze using the console.
+ * Class to launch the Maze Explorer;
+ * Prompts the user through the console for keystrokes, and shows output according to the taken choices.
  */
 public class MazeLauncher {
 

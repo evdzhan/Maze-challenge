@@ -7,6 +7,9 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/**
+ * Loads a maze from the resources folder. There is a default maze included with the source code, "Maze1.txt".
+ */
 public class MazeLoader {
 
     public static final String DEFAULT_RESOURCE_NAME = "Maze1.txt";

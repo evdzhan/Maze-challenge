@@ -1,8 +1,9 @@
 package uk.gov.dwp.maze.maze;
 
-import lombok.Value;
+import lombok.Data;
+import lombok.Getter;
 
-@Value
+@Getter
 public class Maze {
 
     final int wallsCount;
@@ -12,8 +13,10 @@ public class Maze {
     final MazeComponent[][] mazeComponents;
 
     public Maze(MazeComponent[][] mazeComponents) {
+        if (mazeComponents == null) {
+            throw new IllegalArgumentException("mazeComponents is null");
+        }
         this.mazeComponents = mazeComponents;
-
         int _wallsCount = 0;
         int _spacesCount = 0;
         int _startX = -1;
